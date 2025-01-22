@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departments Performance</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .sidebar {
+            width: 20%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h3 {
+            margin-bottom: 10px;
+        }
+
+        .content {
+            width: 75%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .chart-section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(50% - 20px);
+            text-align: center;
+        }
+
+        .chart {
+            margin: 20px auto;
+            width: 200px;
+            height: 150px;
+            background-color: #eee;
+        }
+
+        .line-chart {
+            margin-top: 20px;
+            width: 100%;
+            height: 150px;
+            background-color: #eee;
+        }
+
+        .save-button {
+            display: block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            margin: 20px auto;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 200px;
+        }
+
+        .save-button:hover {
+            background-color: #45a049;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 5px;
+            z-index: 1000;
+            text-align: center;
+            width: 300px;
+        }
+
+        .popup button {
+            margin-top: 20px;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .popup button:hover {
+            background-color: #0056b3;
+        }
+
+        .popup .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        .manager-section {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .manager-section img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #ddd;
+            margin-bottom: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h3>Departments Performance</h3>
+            <form>
+                <label><input type="radio" name="department" value="financial"> Financial</label><br>
+                <label><input type="radio" name="department" value="marketing"> Marketing</label><br>
+                <label><input type="radio" name="department" value="sales" checked> Sales</label><br>
+                <label><input type="radio" name="department" value="staff"> Staff</label>
+            </form>
+        </div>
+
+        <div class="content">
+            <div class="chart-section">
+                <h3>Bar Chart</h3>
+                <img src="https://www.amcharts.com/wp-content/uploads/2013/12/demo_7394_none-8-1024x690.png" alt="Bar Chart">
+            </div>
+            <div class="chart-section">
+                <h3>Pie Chart</h3>
+                <img src="https://www.stata.com/support/faqs/graphics/gph/graphdocs/graph_img/pie1_stcolor.svg" alt="Pie Chart">
+            </div>
+            <div class="chart-section">
+                <h3>Line Chart</h3>
+                <img src="https://exceljet.net/sites/default/files/styles/og_image/public/images/chart/income%20statement%20annual.png" alt="Line Chart">
+            </div>
+        </div>
+    </div>
+
+    <div class="manager-section">
+        <img src="https://www.shutterstock.com/image-photo/portrait-handsome-caucasian-man-formal-600nw-2142820441.jpg" alt="Manager Image">
+        <p>Department's Manager</p>
+    </div>
+
+    <button class="save-button">Save Changes</button>
+
+    <div class="overlay" onclick="closePopup()"></div>
+
+    <div class="popup">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h2>Message Title</h2>
+        <p>Missing data or possible network fail</p>
+        <button onclick="closePopup()">OK</button>
+    </div>
+</body>
+</html>

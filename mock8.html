@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f5f5f5;
+        }
+
+        .button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .input-field {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .details-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .details-container ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .details-container ul li {
+            margin-bottom: 10px;
+        }
+
+        .details-container ul ul {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button class="button" onclick="window.location.href='mock7.html'">Scan QR</button>
+    <input type="text" class="input-field" placeholder="Enter ticket ID">
+
+    <div class="details-container">
+        <ul>
+            <li>Ticket ID details:</li>
+            <li>- Status: valid</li>
+            <li>- Meals:
+                <ul>
+                    <li>- Meal 1</li>
+                    <li>- Meal 2</li>
+                    <li>- Meal 3</li>
+                </ul>
+            </li>
+            <li>- Amount:</li>
+        </ul>
+    </div>
+</body>
+</html>

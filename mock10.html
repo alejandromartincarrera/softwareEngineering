@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Reports</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .chart-section {
+            width: 30%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .chart {
+            margin: 20px auto;
+            width: 100px;
+            height: 100px;
+            background-color: #ddd;
+            border-radius: 50%;
+        }
+
+        .line-chart {
+            width: 100%;
+            height: 150px;
+            background-color: #eee;
+            margin-top: 20px;
+        }
+
+        .table-section {
+            width: 65%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        .save-button {
+            display: block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            margin: 20px auto;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 200px;
+        }
+
+        .save-button:hover {
+            background-color: #45a049;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 5px;
+            z-index: 1000;
+            text-align: center;
+            width: 300px;
+        }
+
+        .popup button {
+            margin-top: 20px;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .popup button:hover {
+            background-color: #0056b3;
+        }
+
+        .popup .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+    <script>
+        function showPopup() {
+            document.querySelector('.overlay').style.display = 'block';
+            document.querySelector('.popup').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.querySelector('.overlay').style.display = 'none';
+            document.querySelector('.popup').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="chart-section">
+            <h3>Financial Reports</h3>
+            <img src="https://www.stata.com/support/faqs/graphics/gph/graphdocs/graph_img/pie1_stcolor.svg" alt="Pie Chart">
+            <div class="line-chart">
+                <img src="https://exceljet.net/sites/default/files/styles/og_image/public/images/chart/income%20statement%20annual.png" alt="Income Chart">
+            </div>
+        </div>
+        <div class="table-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Task</th>
+                        <th>Start</th>
+                        <th>Effort</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Task 1</td>
+                        <td>20/10/2014 8:00 AM</td>
+                        <td>40h</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Task 2</td>
+                        <td>20/10/2014 8:00 AM</td>
+                        <td>40h</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Task 3</td>
+                        <td>20/10/2014 8:00 AM</td>
+                        <td>40h</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Task 4</td>
+                        <td>20/10/2014 8:00 AM</td>
+                        <td>40h</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <button class="save-button">Save Changes</button>
+
+    <div class="overlay" onclick="closePopup()"></div>
+
+    <div class="popup">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h2>Message Title</h2>
+        <p>Missing data or possible network fail</p>
+        <button onclick="closePopup()">OK</button>
+    </div>
+</body>
+</html>

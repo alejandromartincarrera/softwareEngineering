@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket QR Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .ticket-container {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .ticket-container img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 50%;
+            background-color: #ddd;
+        }
+
+        .ticket-info {
+            flex: 1;
+        }
+
+        .ticket-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .ticket-actions button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .ticket-actions button:hover {
+            background-color: #0056b3;
+        }
+
+        .ticket-actions select {
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="ticket-container">
+        <img src="https://docs.lightburnsoftware.com/legacy/img/QRCode/ExampleCode.png" alt="QR Image">
+        <div class="ticket-info">
+            Ticket 1 QR:
+        </div>
+        <div class="ticket-actions">
+            <button>Download</button>
+            <button>Share</button>
+            <select>
+                <option>format</option>
+                <option>PDF</option>
+                <option>PNG</option>
+                <option>JPEG</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="ticket-container">
+        <img src="https://docs.lightburnsoftware.com/legacy/img/QRCode/ExampleCode.png" alt="QR Image">
+        <div class="ticket-info">
+            Ticket 2 QR:
+        </div>
+        <div class="ticket-actions">
+            <button>Download</button>
+            <button>Share</button>
+            <select>
+                <option>format</option>
+                <option>PDF</option>
+                <option>PNG</option>
+                <option>JPEG</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="ticket-container">
+        <img src="https://docs.lightburnsoftware.com/legacy/img/QRCode/ExampleCode.png" alt="QR Image">
+        <div class="ticket-info">
+            Ticket 3 QR:
+        </div>
+        <div class="ticket-actions">
+            <button>Download</button>
+            <button>Share</button>
+            <select>
+                <option>format</option>
+                <option>PDF</option>
+                <option>PNG</option>
+                <option>JPEG</option>
+            </select>
+        </div>
+    </div>
+</body>
+</html>
